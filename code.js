@@ -70,10 +70,11 @@ function runFrequencyAnalysis() {
 
     const finalKey = keyChars.join("");
     document.getElementById("finalKey").textContent = finalKey.toUpperCase();
-
+//ascii value pismen
     const decrypted = [];
     for (let i = 0; i < clean.length; i++) {
         const cCode = clean.charCodeAt(i) - 97;
+        //velikost posunu
         const shift = finalKey.charCodeAt(i % 3) - 97;
         const pCode = ((cCode - shift + 26) % 26) + 97;
         decrypted.push(String.fromCharCode(pCode));
@@ -83,10 +84,4 @@ function runFrequencyAnalysis() {
     document.getElementById("resultsSection").style.display = "block";
     document.getElementById("resultsSection").scrollIntoView({ behavior: "smooth" });
 
-
-    navigator.clipboard.writeText(plainText).then(() => {
-        const btn = document.getElementById("copyBtn");
-        btn.textContent = "Zkopírováno!";
-        setTimeout(() => { btn.textContent = "Kopírovat text"; }, 1500);
-    });
 }

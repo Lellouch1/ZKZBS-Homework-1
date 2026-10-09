@@ -15,3 +15,15 @@ section {
     align-items: center;
     gap: 10px;
 }
+
+.Rei {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.Rei img {
+    display: block;
+    max-height: 60vh;
+    max-width: 40vw;
+}
