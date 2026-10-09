@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <title>ZKZBS Homework</title>
-    <link rel="stylsheet" href="compnents.css">
-    
+    <link rel="stylesheet" href="compnents.css">
 </head>
 <body>
+
+<h1>Frekvenční analýza Vigenerovy šifry</h1>
+<p>Rozklad na 3 monoalfabetické proudy</p>
+
+<textarea id="cipherInput" rows="6" cols="60" placeholder="Enter ST"></textarea>
+<br>
+<button id="runBtn">Spustit analýzu proudů</button>
+
+<section id="resultsSection" style="display: none;">
+    <h2>Výsledky</h2>
+
+    <p>1. proud: znaků <span id="s0-count">-</span>, <span id="s0-shift">-</span>, klíč: <strong id="s0-char">-</strong></p>
+    <p>2. proud: znaků <span id="s1-count">-</span>, <span id="s1-shift">-</span>, klíč: <strong id="s1-char">-</strong></p>
+    <p>3. proud: znaků <span id="s2-count">-</span>, <span id="s2-shift">-</span>, klíč: <strong id="s2-char">-</strong></p>
+
+    <h3>Sestavený klíč: <span id="finalKey">---</span></h3>
+
+    <textarea id="plainOutput" rows="8" cols="60" readonly placeholder="Enter ST"></textarea>
+    <br>
+    <button id="copyBtn">Kopírovat text</button>
+</section>
+
+<script src="code.js"></script>
 
 </body>
 </html>
